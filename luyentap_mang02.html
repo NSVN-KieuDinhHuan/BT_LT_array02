@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02</title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for (i=0;i<a.length;i++) {
+        document.write("row "+i)
+        document.write("<br>")
+        for(j=0;j<a[i].length;j++){
+
+            document.write(a[i][j])
+            document.write("<br>")
+        }
+
+    }
+    //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    let b=[ 'c', 's', 'c', '2', '6', '1' ];
+    let last=b.length-1;
+    let c2=[];
+    while(last>=0){
+        c2.push(b[last])
+        last=last-1;
+    }
+    document.write("bài 2: in ra chuỗi đảo ngược là "+c2.join(""))
+    document.write("<br>")
+    let c=["a","b","c",1,2,3]
+    //Bài 3:Chương trình này đếm số ký tự số trong mảng.
+    let count=0
+    for (let i of b) {
+        if (i*0===0) {
+            count++
+        }
+
+    }
+    document.write("Bài 3: số ký tự số trong mảng  c=['a','b','c',1,2,3] là " + count)
+    //Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+    let d=prompt("Bài 4:nhập chuỗi có chứa số").toString()
+    let count4=0
+    for (i=0;i<d.length;i++) {
+       if(d[i]*0==0) {
+           count4=count4+1
+       }
+    }
+    document.write("<br>")
+    document.write("Bài 4:số lượng số trong chuỗi "+d+" là "+count4)
+    document.write("<br>")
+    ///Bài 5
+    let chuoi1=prompt(" Bài 5:nhập chuỗi 1").toString()
+    let chuoi2=prompt("Bài 5: nhập chuỗi 2").toString()
+    let check=true
+    if (chuoi1.length!=chuoi2.length){
+        check=false
+    }
+    for (i=0;i<chuoi1.length;i++){
+            if (chuoi1[i]!=chuoi2[i]){
+                check=false
+            }
+    }
+    if ( check==true) {
+        document.write("2 chuỗi giống nhau")
+    }else {
+        document.write("2 chuỗi khác nhau")
+    }
+    //Bai6:Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+    let chuoi=prompt(" Bài 6:nhập  vào 1 chuỗi có chứa'-'").toString()
+    let arr=[]
+    for (i=0;i<chuoi.length;i++) {
+
+        if (chuoi[i]=="-") {
+            arr.push("_")
+        }else {
+            arr.push(chuoi[i])
+        }
+    }
+    document.write("<br>")
+    document.write("Bài 6:"+ arr.join(""))
+</script>
+</body>
+</html>
